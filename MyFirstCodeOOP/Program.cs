@@ -173,9 +173,12 @@ namespace MyFirstCodeOOP
                 //Console.WriteLine(baseCommisionEmployee);
 
                 ICollection<Employee> employees = new List<Employee>()
-                { 
-
-                }
+                {
+                    salaryEmployee, 
+                    commisionEmployee, 
+                    contractorEmployee, 
+                    baseCommisionEmployee
+                };
             }
             catch (Exception ex)
             {

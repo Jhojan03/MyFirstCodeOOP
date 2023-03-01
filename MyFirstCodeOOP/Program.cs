@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 
 namespace MyFirstCodeOOP
@@ -50,7 +52,7 @@ namespace MyFirstCodeOOP
                     Salary = salary
                 };
 
-                Console.WriteLine(salaryEmployee);
+                //Console.WriteLine(salaryEmployee);
 
                 Console.WriteLine("");
 
@@ -88,7 +90,7 @@ namespace MyFirstCodeOOP
                     Sales = sales
                 };
 
-                Console.WriteLine(commisionPercentege);
+                //Console.WriteLine(commisionPercentege);
 
                 Console.WriteLine("");
 
@@ -126,7 +128,7 @@ namespace MyFirstCodeOOP
                     HourValue = hourValue
                 };
 
-                Console.WriteLine(contractorEmployee);
+                //Console.WriteLine(contractorEmployee);
 
                 Console.WriteLine("");
 
@@ -168,8 +170,12 @@ namespace MyFirstCodeOOP
                     Base = salaryBase
                 };
 
-                Console.WriteLine(baseCommisionEmployee);
+                //Console.WriteLine(baseCommisionEmployee);
 
+                ICollection<Employee> employees = new List<Employee>()
+                { 
+
+                }
             }
             catch (Exception ex)
             {

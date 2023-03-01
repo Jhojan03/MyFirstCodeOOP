@@ -90,6 +90,44 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine(commisionPercentege);
 
+                Console.WriteLine("");
+
+                Console.WriteLine("********************");
+                Console.WriteLine("*Contractor Employee*");
+                Console.WriteLine("********************");
+
+                Console.WriteLine("Type your ID");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Type your first name");
+                firstname = Console.ReadLine();
+
+                Console.WriteLine("Type your last name");
+                lastname = Console.ReadLine();
+
+                Console.WriteLine("Are you active?");
+                isActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your number of hours");
+                float hours = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Enter your value per hour");
+                decimal hourValue = Convert.ToDecimal(Console.ReadLine());
+
+                Employee contractorEmployee = new ContractorEmployee()
+                {
+                    Id = id,
+                    FirstName = firstname,
+                    LastName = lastname,
+                    BirthDate = new Date(Convert.ToInt32(_yearIn), Convert.ToInt32(_monthIn), Convert.ToInt32(_dayIn)),
+                    HiringDate = new Date(2022, 12, 31),
+                    IsActive = isActive,
+                    Hours = hours,
+                    HourValue = hourValue
+                };
+
+                Console.WriteLine(contractorEmployee);
+
             }
             catch (Exception ex)
             {

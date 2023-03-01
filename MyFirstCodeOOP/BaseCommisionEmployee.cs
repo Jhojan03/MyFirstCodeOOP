@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MyFirstCodeOOP
+{
+    public class BaseCommisionEmployee : CommisionEmployee
+    {
+        #region Properties
+        public decimal Base { get; set; }
+        #endregion
+
+        #region Methods
+        public override decimal GetValueToPay()
+        {
+            return ((Sales * (decimal)ConvertPercentage(ComissionPercentage)) + Base);
+        }
+        public override string ToString()
+        {
+            return $"{base.ToString()}" +
+                 $"\n\tSalary Base..........{Base:C2}" +
+                 $"\n\tValue to pay..................{GetValueToPay():C2}";
+            #endregion
+        }
+}

@@ -24,18 +24,71 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine("********Testing latest implementation********");
 
+                Console.WriteLine("Type your ID");
+                int id = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Type your first name");
+                string firstname = Console.ReadLine();
+
+                Console.WriteLine("Type your last name");
+                string lastname = Console.ReadLine();
+
+                Console.WriteLine("Are you active?");
+                bool isActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your salary");
+                decimal salary = Convert.ToDecimal(Console.ReadLine());
+
                 Employee salaryEmployee = new SalaryEmployee()
                 {
-                    Id = Convert.ToInt32(Console.ReadLine()),
-                    FirstName = Console.ReadLine(),
-                    LastName = Console.ReadLine(),
+                    Id = id,
+                    FirstName = firstname,
+                    LastName = lastname,
                     BirthDate = new Date(Convert.ToInt32(_yearIn), Convert.ToInt32(_monthIn), Convert.ToInt32(_dayIn)),
                     HiringDate = new Date(2022, 12, 31),
-                    IsActive = Convert.ToBoolean(Console.ReadLine()),
-                    Salary = Convert.ToDecimal(Console.ReadLine())
+                    IsActive = isActive,
+                    Salary = salary
                 };
 
                 Console.WriteLine(salaryEmployee);
+
+                Console.WriteLine("");
+
+                Console.WriteLine("********************");
+                Console.WriteLine("*Commision Employee*");
+                Console.WriteLine("********************");
+
+                Console.WriteLine("Type your ID");
+                id = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Type your first name");
+                firstname = Console.ReadLine();
+
+                Console.WriteLine("Type your last name");
+                lastname = Console.ReadLine();
+
+                Console.WriteLine("Are you active?");
+                isActive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your commision percentage");
+                float commisionPercentege = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Enter your sales");
+                decimal sales = Convert.ToDecimal(Console.ReadLine());
+
+                Employee commisionEmployee = new CommisionEmployee()
+                {
+                    Id = id,
+                    FirstName = firstname,
+                    LastName = lastname,
+                    BirthDate = new Date(Convert.ToInt32(_yearIn), Convert.ToInt32(_monthIn), Convert.ToInt32(_dayIn)),
+                    HiringDate = new Date(2022, 12, 31),
+                    IsActive = isActive,
+                    ComissionPercentage = commisionPercentege,
+                    Sales = sales
+                };
+
+                Console.WriteLine(commisionPercentege);
 
             }
             catch (Exception ex)
